@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import styled from '@mui/system/styled'
 
-const Square = (value: string, onClick: any) => (
+type Props = { value: string | null; onClick: () => void }
+
+const Square = ({ value, onClick }: Props) => (
 	<MotionButton
 		onClick={onClick}
 		whileHover={{ scale: 1.1 }}

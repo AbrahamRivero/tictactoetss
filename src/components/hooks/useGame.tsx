@@ -1,10 +1,11 @@
 import { calculateWinner } from '@/helpers/utils'
 import { useState } from 'react'
-import Square from '../Square'
 import Box from '@mui/material/Box'
+import Square from '../Square'
+import WinnerAlert from '../WinnerAlert/WinnerAlert'
 
 const useGame = () => {
-	const [board, setBoard] = useState<any[]>(Array(9).fill(null))
+	const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null))
 	const [xIsNext, setXIsNext] = useState<boolean>(true)
 	const [winner, setWinner] = useState<any>(null)
 	const [startPlayer, setStartPlayer] = useState<any>(null)
@@ -46,21 +47,30 @@ const useGame = () => {
 
 	let status
 	if (winner) {
-		status = 'prueba'
+		status = (
+			<WinnerAlert
+				winner={winner}
+				handleReset={handleReset}
+				handleSelectPlayer={handleSelectPlayer}
+			/>
+		)
 	} else if (isBoardFull()) {
-		status = 'prueba1'
+		status = (
+			<WinnerAlert
+				winner="="
+				handleReset={handleReset}
+				handleSelectPlayer={handleSelectPlayer}
+			/>
+		)
 	} else {
 		status = 'Next player: ' + (xIsNext ? 'X' : 'O')
 	}
 
-	const renderSquare = (squarePosition: number) => squarePosition
+	const renderSquare = (squarePosition: number) => {
+		const value = board[squarePosition]
 
-	/* (
-		<Square
-			value={board[squarePosition]}
-			onClick={() => handleClick(squarePosition)}
-		/>
-	) */
+		return <Square value={value} onClick={() => handleClick(squarePosition)} />
+	}
 
 	return {
 		handleClick,
@@ -71,27 +81,6 @@ const useGame = () => {
 		renderSquare,
 		startPlayer,
 	}
-
-	/*let status
-	if (winner) {
-		status = (
-			<WinnerShow
-				winner={winner}
-				handleReset={handleReset}
-				handleSelectPlayer={handleSelectPlayer}
-			/>
-		)
-	} else if (isBoardFull()) {
-		status = (
-			<WinnerShow
-				winner="="
-				handleReset={handleReset}
-				handleSelectPlayer={handleSelectPlayer}
-			/>
-		)
-	} else {
-		status = 'Next player: ' + (xIsNext ? 'X' : 'O')
-	} */
 }
 
 export default useGame

@@ -18,7 +18,7 @@ const Footer = () => (
 		<LinksDivider orientation="vertical" variant="fullWidth" flexItem />
 		<Box>
 			<FooterLink
-				href="https://github.com/AbrahamRivero/tic-tac-toe"
+				href="https://github.com/AbrahamRivero/tictactoetss"
 				target="_blank"
 				rel="noopener noreferrer"
 			>

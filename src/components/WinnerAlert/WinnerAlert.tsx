@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion'
 import RestartAltOutlined from '@mui/icons-material/RestartAltOutlined'
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined'
-import { MouseEventHandler } from 'react'
 
-const WinnerAlert = (
-	winner: string,
-	handleReset: MouseEventHandler<HTMLButtonElement>,
-	handleSelectPlayer: MouseEventHandler<HTMLButtonElement>
-) => {
-	let message
+type Props = {
+	winner: string
+	handleReset: () => void
+	handleSelectPlayer: () => void
+}
+
+const WinnerAlert = ({ winner, handleReset, handleSelectPlayer }: Props) => {
+	let message: string
 	if (winner === '=') {
 		message = "It's a tie!"
 	} else {
