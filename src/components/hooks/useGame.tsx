@@ -1,8 +1,7 @@
 import { calculateWinner } from '@/helpers/utils'
 import { useState } from 'react'
-import Box from '@mui/material/Box'
 import Square from '../Square'
-import WinnerAlert from '../WinnerAlert/WinnerAlert'
+import WinnerAlert from '../WinnerAlert'
 
 const useGame = () => {
 	const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null))
@@ -40,7 +39,7 @@ const useGame = () => {
 
 	const isBoardFull = (): boolean => {
 		for (let i = 0; i < board.length; i++) {
-			if (board[i] === null) false
+			if (board[i] === null) return false
 		}
 		return true
 	}
@@ -80,6 +79,7 @@ const useGame = () => {
 		isBoardFull,
 		renderSquare,
 		startPlayer,
+		status,
 	}
 }
 

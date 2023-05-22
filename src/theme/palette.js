@@ -49,6 +49,7 @@ const palette = {
 		secondary: colors.blueGrey[600],
 		light: colors.blueGrey[500],
 		lightGray: '#00000061',
+		white: white,
 		link: colors.blue[600],
 	},
 	background: {

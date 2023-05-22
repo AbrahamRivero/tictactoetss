@@ -35,7 +35,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
 	justifyContent: 'center',
 	alignItems: 'center',
 	padding: `${theme.spacing(1)} 0`,
-	color: theme.palette.black,
+	color: theme.palette.text.white,
 
 	[theme.breakpoints.down('sm')]: {
 		flexWrap: 'wrap',
@@ -50,7 +50,7 @@ const GithubLinkContainer = styled(Box)(({ theme }) => ({
 
 const FooterLink = styled(Link)(({ theme }) => ({
 	fontWeight: 'bold',
-	color: theme.palette.black,
+	color: theme.palette.text.white,
 	textDecoration: 'none',
 
 	':hover': {
