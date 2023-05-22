@@ -29,9 +29,9 @@ const WinnerAlert = ({ winner, handleReset, handleSelectPlayer }: Props) => {
 				<WinnerMessageActionsContainer>
 					<MessageContainer>
 						<WinnerContainer winner={winner}>
-							<WinnerMessage variant="body1">{winner}</WinnerMessage>
+							<WinnerMessage variant="h1">{winner}</WinnerMessage>
 						</WinnerContainer>
-						<MessageText>{message}</MessageText>
+						<MessageText variant="h1">{message}</MessageText>
 					</MessageContainer>
 
 					<ActionsContainer>
@@ -111,7 +111,7 @@ const WinnerContainer = styled(({ winner, ...props }: WinnerContainerProps) => (
 
 const WinnerMessage = styled(Typography)(({ theme }) => ({
 	textAlign: 'center',
-	fontWeight: 800,
+	fontWeight: 700,
 	color: 'transparent',
 	backgroundClip: 'text',
 	backgroundImage: `linear-gradient(to right, #f97316,#ea580c)`,
@@ -119,7 +119,7 @@ const WinnerMessage = styled(Typography)(({ theme }) => ({
 
 const MessageText = styled(Typography)(({ theme }) => ({
 	textAlign: 'center',
-	fontWeight: 800,
+	fontWeight: 700,
 	color: 'transparent',
 	backgroundClip: 'text',
 	backgroundImage: `linear-gradient(to right,#ea580c,${theme.palette.primary.main})`,
@@ -151,11 +151,12 @@ const MotionContainer = styled(motion.div)(({ theme }) => ({
 	justifyContent: 'center',
 	alignItems: 'center',
 	padding: `${theme.spacing(8)} ${theme.spacing(14)}`,
-	backgroundColor: 'rgb(0 0 0)',
-	opacity: 0.8,
+	backgroundColor: 'rgba(0 0 0 /0.9)',
+
 	borderRadius: theme.spacing(3),
 
 	[theme.breakpoints.down('sm')]: {
-		padding: `0 ${theme.spacing(10)}`,
+		paddingLeft: theme.spacing(7),
+		paddingRight: theme.spacing(7),
 	},
 }))

@@ -23,7 +23,6 @@ const MotionButton = styled(motion.button)(({ theme }) => ({
 	width: theme.spacing(16),
 	height: theme.spacing(16),
 	backgroundColor: '#262626',
-	opacity: 0.5,
 	borderRadius: theme.spacing(1.5),
 	border: theme.spacing(0.125),
 	borderColor: '#6969697a',
@@ -33,22 +32,24 @@ const MotionButton = styled(motion.button)(({ theme }) => ({
 	color: theme.palette.white,
 	textAlign: 'center',
 
-	[theme.breakpoints.down('sm')]: {
-		width: theme.spacing(10),
-		height: theme.spacing(10),
-		fontSize: '3.75rem',
+	[theme.breakpoints.down('lg')]: {
+		width: theme.spacing(14),
+		height: theme.spacing(14),
+		fontSize: '6rem',
 		lineHeight: 1,
 	},
+
 	[theme.breakpoints.down('md')]: {
 		width: theme.spacing(12),
 		height: theme.spacing(12),
 		fontSize: '4.5rem',
 		lineHeight: 1,
 	},
-	[theme.breakpoints.down('lg')]: {
-		width: theme.spacing(14),
-		height: theme.spacing(14),
-		fontSize: '6rem',
+
+	[theme.breakpoints.down('sm')]: {
+		width: theme.spacing(10),
+		height: theme.spacing(10),
+		fontSize: '3.75rem',
 		lineHeight: 1,
 	},
 }))

@@ -91,8 +91,7 @@ const GeneralContainer = styled(Box)(({ theme }) => ({
 	alignItems: 'center',
 	justifyContent: 'space-between',
 	minHeight: '100vh',
-	backgroundColor: 'rgb(0 0 0)',
-	opacity: 0.9,
+	backgroundColor: 'rgba(25 25 25 /0.95)',
 	textAlign: 'center',
 }))
 
@@ -116,6 +115,10 @@ const LazyMotionStatusContainer = styled(Box)(({ theme }) => ({
 	backgroundColor: '#0000008f',
 	borderRadius: theme.spacing(0.75),
 	padding: theme.spacing(4),
+
+	[theme.breakpoints.down('sm')]: {
+		padding: theme.spacing(2),
+	},
 }))
 
 const MContainer = styled(m.div)(({ theme }) => ({

@@ -4,7 +4,7 @@ const typography = {
 	htmlFontSize: 16,
 	fontFamily: ['"Plus Jakarta Sans"', 'sans-serif'].join(','),
 	h1: {
-		fontSize: '2.125rem',
+		fontSize: '3.75rem',
 		fontWeight: 400,
 		[MOBILE_MEDIA_QUERY]: {
 			fontSize: '1.65rem',
