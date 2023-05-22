@@ -52,6 +52,7 @@ const FooterLink = styled(Link)(({ theme }) => ({
 	fontWeight: 'bold',
 	color: theme.palette.text.white,
 	textDecoration: 'none',
+	textTransform: 'capitalize',
 
 	':hover': {
 		color: theme.palette.primary.main,
@@ -59,5 +60,6 @@ const FooterLink = styled(Link)(({ theme }) => ({
 }))
 
 const LinksDivider = styled(Divider)(({ theme }) => ({
+	borderColor: theme.palette.white,
 	margin: `0 ${theme.spacing(0.5)}`,
 }))

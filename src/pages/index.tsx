@@ -14,7 +14,7 @@ const HomePage = () => {
 		<Page
 			disablePadding
 			pageTitle="Tic Tac Toe"
-			metaDescription=" Un juego de Tic Tac Toe hecho en TypeScript con fines didacticos"
+			metaDescription="Juega al clásico juego de Tic Tac Toe y desafía a tus amigos."
 			pageHead={null}
 		>
 			<GeneralContainer>
@@ -97,11 +97,12 @@ const GeneralContainer = styled(Box)(({ theme }) => ({
 
 const GameTitleContainer = styled(Box)(({ theme }) => ({
 	width: 'auto',
-	margin: `${theme.spacing(2.5)} 0 ${theme.spacing(3.5)} 0`,
+	margin: `${theme.spacing(5.5)} 0 ${theme.spacing(3.5)} 0`,
 }))
 
 const GameTitle = styled(Typography)(({ theme }) => ({
 	textAlign: 'center',
+	textTransform: 'capitalize',
 	fontWeight: 900,
 	color: 'rgba(38, 38, 83, 0)',
 	fontSize: '3.75rem',
