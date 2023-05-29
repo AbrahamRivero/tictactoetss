@@ -6,7 +6,7 @@ export default function Document() {
 			<Head>
 				<link rel="icon" type="image/ico" sizes="32x32" href="/favicon.ico" />
 				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5075083600603705"
-					crossorigin="anonymous"></script>
+					crossOrigin="anonymous"></script>
 			</Head>
 			<body>
 				<Main />
